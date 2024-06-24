@@ -53,7 +53,7 @@ The goal of this project is to build a robust and scalable ETL pipeline that can
    - A Python script using the `spotipy` library authenticates with the Spotify API using client credentials.
 
 2. **Data Extraction:**
-   - The script fetches data from Spotify endpoints and stores the raw JSON data in respective S3 buckets (`s3://spotify-data/raw/tracks/`, `s3://spotify-data/raw/albums/`, etc.).
+   - The script fetches data from Spotify endpoints and stores the raw JSON data in respective S3 buckets.
 
 3. **Triggering Transformations:**
    - Uploading data to S3 triggers Lambda functions, which read the raw data, transform it, and store the transformed data in a different S3 bucket (`s3://spotify-data/transformed/`).
